@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Product | ShopZone</title>
+<meta name="description" content="ShopZone product detail page — educational/portfolio demo inspired by e-commerce product pages.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<div class="utility-bar">
+  <div class="utility-bar__inner">
+    <span><i class="fa-solid fa-truck-fast"></i> Free delivery on orders over ₹499</span>
+    <span class="utility-bar__right">Track your order &bull; Help Center</span>
+  </div>
+</div>
+
+<header class="site-header" id="site-header">
+  <div class="site-header__row">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <a href="index.html" class="logo" aria-label="ShopZone home">
+      <span class="logo__mark">
+        <svg viewBox="0 0 40 40" width="30" height="30" aria-hidden="true">
+          <path d="M6 14 L20 6 L34 14 L34 28 L20 36 L6 28 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="20" cy="21" r="6" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="logo__text">Shop<em>Zone</em></span>
+    </a>
+
+    <button class="deliver-to" aria-label="Choose delivery location">
+      <i class="fa-solid fa-location-dot"></i>
+      <span class="deliver-to__text">
+        <small>Deliver to Ananya</small>
+        <strong>Bengaluru 560001</strong>
+      </span>
+    </button>
+
+    <div class="search-bar">
+      <select class="search-bar__category" aria-label="Search category">
+        <option>All Categories</option>
+        <option>Electronics</option>
+        <option>Fashion</option>
+        <option>Mobiles</option>
+        <option>Computers</option>
+        <option>Home &amp; Kitchen</option>
+        <option>Books</option>
+        <option>Toys</option>
+      </select>
+      <input type="text" placeholder="Search ShopZone" aria-label="Search products" id="searchInput">
+      <button class="search-bar__btn" aria-label="Search" id="searchBtn">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </div>
+
+    <button class="header-link header-link--lang" aria-label="Choose language">
+      <span class="flag-dot">IN</span> EN <i class="fa-solid fa-chevron-down header-link__caret"></i>
+    </button>
+    <button class="header-link header-link--account">
+      <small>Hello, sign in</small>
+      <strong>Account &amp; Lists <i class="fa-solid fa-chevron-down header-link__caret"></i></strong>
+    </button>
+    <button class="header-link header-link--orders">
+      <small>Returns</small>
+      <strong>&amp; Orders</strong>
+    </button>
+
+    <a href="index.html#cart" class="cart-btn" id="cartBtn" aria-label="View cart">
+      <span class="cart-btn__icon-wrap">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="cart-btn__count" id="cartCount">0</span>
+      </span>
+      <strong>Cart</strong>
+    </a>
+  </div>
+
+  <nav class="sub-nav" id="subNav" aria-label="Product categories">
+    <button class="sub-nav__all" id="allCategoriesBtn"><i class="fa-solid fa-bars"></i> All</button>
+    <ul class="sub-nav__list">
+      <li><a href="index.html?category=Today%27s%20Deals">Today's Deals</a></li>
+      <li><a href="index.html?category=Electronics">Electronics</a></li>
+      <li><a href="index.html?category=Fashion">Fashion</a></li>
+      <li><a href="index.html?category=Mobiles">Mobiles</a></li>
+      <li><a href="index.html?category=Computers">Computers</a></li>
+      <li><a href="index.html?category=Home%20%26%20Kitchen">Home &amp; Kitchen</a></li>
+      <li><a href="index.html?category=Books">Books</a></li>
+      <li><a href="index.html?category=Toys">Toys</a></li>
+      <li><a href="#">Customer Service</a></li>
+      <li><a href="#">Gift Cards</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__header">
+    <span>Hello, sign in</span>
+    <button id="closeMobileMenu" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul>
+    <li><a href="index.html?category=Today%27s%20Deals">Today's Deals</a></li>
+    <li><a href="index.html?category=Electronics">Electronics</a></li>
+    <li><a href="index.html?category=Fashion">Fashion</a></li>
+    <li><a href="index.html?category=Mobiles">Mobiles</a></li>
+    <li><a href="index.html?category=Computers">Computers</a></li>
+    <li><a href="index.html?category=Home%20%26%20Kitchen">Home &amp; Kitchen</a></li>
+    <li><a href="index.html?category=Books">Books</a></li>
+    <li><a href="index.html?category=Toys">Toys</a></li>
+    <li><a href="#">Customer Service</a></li>
+    <li><a href="#">Gift Cards</a></li>
+  </ul>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
+
+<div class="breadcrumb">
+  <div class="breadcrumb__inner" id="breadcrumbInner">
+    <a href="index.html">All Products</a>
+  </div>
+</div>
+
+<main id="main-content">
+  <section class="product-section" id="productSection">
+    <!-- Populated entirely by product.js: gallery / product-info / buy-box -->
+  </section>
+
+  <section class="specs-section">
+    <h2 class="section-title">Product Information</h2>
+    <div class="specs-table" id="specsTable"></div>
+  </section>
+
+  <section class="reviews-section" id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+    <div class="reviews-summary" id="reviewsSummary"></div>
+    <div class="review-list" id="reviewList"></div>
+  </section>
+
+  <section class="related-section">
+    <h2 class="section-title">Related products you might like</h2>
+    <div class="related-slider-wrap">
+      <button class="slider-arrow slider-arrow--left" id="sliderLeft" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
+      <div class="related-slider" id="relatedSlider"></div>
+      <button class="slider-arrow slider-arrow--right" id="sliderRight" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="cartToast" role="status" aria-live="polite">
+  <i class="fa-solid fa-circle-check"></i> <span id="toastMessage">Added to cart</span>
+</div>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<footer class="site-footer">
+  <button class="site-footer__top" id="footerTop">Back to top</button>
+  <div class="site-footer__main">
+    <div class="footer-col">
+      <h3>Get to Know Us</h3>
+      <ul>
+        <li><a href="#">About ShopZone</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press Releases</a></li>
+        <li><a href="#">ShopZone Science</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Connect with Us</h3>
+      <ul>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">X (Twitter)</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Make Money with Us</h3>
+      <ul>
+        <li><a href="#">Sell on ShopZone</a></li>
+        <li><a href="#">Become an Affiliate</a></li>
+        <li><a href="#">Advertise Your Products</a></li>
+        <li><a href="#">ShopZone Pay</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Let Us Help You</h3>
+      <ul>
+        <li><a href="#">Your Account</a></li>
+        <li><a href="#">Returns &amp; Orders</a></li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="footer-divider">
+  <div class="site-footer__logo">
+    <span class="logo logo--footer">
+      <span class="logo__mark">
+        <svg viewBox="0 0 40 40" width="26" height="26" aria-hidden="true">
+          <path d="M6 14 L20 6 L34 14 L34 28 L20 36 L6 28 Z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="20" cy="21" r="6" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="logo__text">Shop<em>Zone</em></span>
+    </span>
+  </div>
+  <div class="site-footer__payments">
+    <span><i class="fa-brands fa-cc-visa"></i></span>
+    <span><i class="fa-brands fa-cc-mastercard"></i></span>
+    <span><i class="fa-brands fa-cc-amex"></i></span>
+    <span><i class="fa-solid fa-wallet"></i></span>
+    <span><i class="fa-solid fa-building-columns"></i></span>
+    <span><i class="fa-solid fa-qrcode"></i></span>
+  </div>
+  <p class="site-footer__legal">
+    ShopZone is a fictional demo brand created for educational and portfolio purposes only. Not affiliated with any real retailer.
+    <br>&copy; 2026 ShopZone, Inc. All rights reserved.
+  </p>
+</footer>
+
+<script src="products-data.js"></script>
+<script src="common.js"></script>
+<script src="product.js"></script>
+</body>
+</html>
